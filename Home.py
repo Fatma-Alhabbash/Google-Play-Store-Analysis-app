@@ -43,47 +43,49 @@ This data from Kaggle <a href="https://www.kaggle.com/datasets/lava18/google-pla
             Actionable insights can be drawn for developers to work on and capture the Android market!
 ''', unsafe_allow_html=True)
 
+st.markdown("<br>", unsafe_allow_html=True)
+
 # Metadata of the columns
-st.markdown('<h4>Select column to display the metadata of it</h4>', unsafe_allow_html=True)
+st.markdown('Select column to display the metadata of it', unsafe_allow_html=True)
 column_option = st.selectbox('Select Column', df.columns)
 if column_option == 'App':
-    st.markdown('<h4>App: The name of the mobile application listed on the Google Play Store.</h4>', unsafe_allow_html=True)
+    st.markdown('App: The name of the mobile application listed on the Google Play Store.', unsafe_allow_html=True)
 
 elif column_option == 'Category':
-    st.markdown("<h4>Category: The category to which the app belongs, such as 'Art & Design', 'Entertainment', 'Education', etc.</h4>", unsafe_allow_html=True)
+    st.markdown("Category: The category to which the app belongs, such as 'Art & Design', 'Entertainment', 'Education', etc.", unsafe_allow_html=True)
 
 elif column_option == 'Rating':
-    st.markdown('<h4>Rating: The user rating of the app, ranging from 1 to 5. This represents the average rating given by users who have downloaded and used the app.</h4>', unsafe_allow_html=True)
+    st.markdown('Rating: The user rating of the app, ranging from 1 to 5. This represents the average rating given by users who have downloaded and used the app.', unsafe_allow_html=True)
 
 elif column_option == 'Reviews':
     st.markdown('<h4>Reviews: The number of user reviews for the app. This indicates the total count of reviews written by users on the Google Play Store.</h4>', unsafe_allow_html=True)
 
 elif column_option == 'Size':
-    st.markdown('<h4>Size: The size of the app, representing the amount of storage space it occupies on a device.</h4>', unsafe_allow_html=True)
+    st.markdown('Size: The size of the app, representing the amount of storage space it occupies on a device.', unsafe_allow_html=True)
 
 elif column_option == 'Installs':
-    st.markdown("<h4>Installs: The number of times the app has been installed on Android devices. This provides an estimate of the app's popularity.</h4>", unsafe_allow_html=True)
+    st.markdown("Installs: The number of times the app has been installed on Android devices. This provides an estimate of the app's popularity.", unsafe_allow_html=True)
 
 elif column_option == 'Type':
-    st.markdown("<h4>Type: The type of app, either 'Free' or 'Paid'.</h4>", unsafe_allow_html=True)
+    st.markdown("Type: The type of app, either 'Free' or 'Paid'.", unsafe_allow_html=True)
 
 elif column_option == 'Price':
-    st.markdown("<h4>Price: The price of the app, if it is a paid app. It is given in the local currency.</h4>", unsafe_allow_html=True)
+    st.markdown("Price: The price of the app, if it is a paid app. It is given in the local currency.", unsafe_allow_html=True)
 
 elif column_option == 'Content Rating':
-    st.markdown("<h4>Content Rating: The age group for which the app is appropriate. For example, 'Everyone', 'Teen', 'Mature 17+', etc.</h4>", unsafe_allow_html=True)
+    st.markdown("Content Rating: The age group for which the app is appropriate. For example, 'Everyone', 'Teen', 'Mature 17+', etc.", unsafe_allow_html=True)
 
 elif column_option == 'Genres':
-    st.markdown("<h4>Genres: The genre(s) of the app, such as 'Action', 'Puzzle', 'Arcade', etc.</h4>", unsafe_allow_html=True)
+    st.markdown("Genres: The genre(s) of the app, such as 'Action', 'Puzzle', 'Arcade', etc.", unsafe_allow_html=True)
 
 elif column_option == 'Last Updated':
-    st.markdown("<h4>Last Updated: The date when the app was last updated on the Google Play Store.</h4>", unsafe_allow_html=True)
+    st.markdown("Last Updated: The date when the app was last updated on the Google Play Store.", unsafe_allow_html=True)
 
 elif column_option == 'Current Ver':
-    st.markdown("<h4>Current Ver: The current version of the app available on the Google Play Store.</h4>", unsafe_allow_html=True)
+    st.markdown("Current Ver: The current version of the app available on the Google Play Store.", unsafe_allow_html=True)
 
 elif column_option == 'Android Ver':
-    st.markdown("<h4>Android Ver: The minimum Android version required to run the app.</h4>", unsafe_allow_html=True)
+    st.markdown("Android Ver: The minimum Android version required to run the app.", unsafe_allow_html=True)
 
 
 # Load Data
