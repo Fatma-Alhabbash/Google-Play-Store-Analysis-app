@@ -1,6 +1,11 @@
 import streamlit as st
 import pandas as pd
+import helper_
 
+# Load Data
+df = helper_.load_data()
+
+# Header
 with st.container():
     col1, col2, col3 = st.columns(3)
 
@@ -17,6 +22,7 @@ st.markdown("<h2 style='text-align: center; color: #3399FF;'>Google Play Store D
 
 st.markdown("<br>", unsafe_allow_html=True)
 
+# About the app
 st.header('About the App')
 st.markdown('''
 This app is created to analyze the Google Play Store data using veruious techniques and visualizations.
@@ -28,6 +34,7 @@ This app will contain three sections:
 
 st.markdown("<br>", unsafe_allow_html=True)
 
+# About the data
 st.header('About the Data')
 st.markdown('''
 This data from Kaggle <a href="https://www.kaggle.com/datasets/lava18/google-play-store-apps">Google Play Store Apps</a>
@@ -35,24 +42,48 @@ This data from Kaggle <a href="https://www.kaggle.com/datasets/lava18/google-pla
             The Play Store apps data has enormous potential to drive app-making businesses to success. <br>
             Actionable insights can be drawn for developers to work on and capture the Android market!
 ''', unsafe_allow_html=True)
-st.markdown('''
-<h4>Here's the meta data about each column in the data:</h4>
-    <ol>
-    <li>App: The name of the mobile application listed on the Google Play Store.</li>   
-    <li>Category: The category to which the app belongs, such as 'Art & Design', 'Entertainment', 'Education', etc.</li>
-    <li>Rating: The user rating of the app, ranging from 1 to 5. This represents the average rating given by users who have downloaded and used the app.</li>
-    <li>Reviews: The number of user reviews for the app. This indicates the total count of reviews written by users on the Google Play Store.</li>
-    <li>Size: The size of the app, representing the amount of storage space it occupies on a device.</li>
-    <li>Installs: The number of times the app has been installed on Android devices. This provides an estimate of the app's popularity.</li>
-    <li>Type: The type of app, either 'Free' or 'Paid'.</li>
-    <li>Price: The price of the app, if it is a paid app. It is given in the local currency.</li>
-    <li>Content Rating: The age group for which the app is appropriate. For example, 'Everyone', 'Teen', 'Mature 17+', etc.</li>
-    <li>Genres: The genre(s) of the app, such as 'Action', 'Puzzle', 'Arcade', etc.</li>
-    <li>Last Updated: The date when the app was last updated on the Google Play Store.</li>
-    <li>Current Ver: The current version of the app available on the Google Play Store.</li>
-    <li>Android Ver: The minimum Android version required to run the app.</li>
-    </ol>
-''', unsafe_allow_html=True)
+
+# Metadata of the columns
+st.markdown('<h4>Select column to display the metadata of it</h4>', unsafe_allow_html=True)
+column_option = st.selectbox('Select Column', df.columns)
+if column_option == 'App':
+    st.markdown('<h4>App: The name of the mobile application listed on the Google Play Store.</h4>', unsafe_allow_html=True)
+
+elif column_option == 'Category':
+    st.markdown("<h4>Category: The category to which the app belongs, such as 'Art & Design', 'Entertainment', 'Education', etc.</h4>", unsafe_allow_html=True)
+
+elif column_option == 'Rating':
+    st.markdown('<h4>Rating: The user rating of the app, ranging from 1 to 5. This represents the average rating given by users who have downloaded and used the app.</h4>', unsafe_allow_html=True)
+
+elif column_option == 'Reviews':
+    st.markdown('<h4>Reviews: The number of user reviews for the app. This indicates the total count of reviews written by users on the Google Play Store.</h4>', unsafe_allow_html=True)
+
+elif column_option == 'Size':
+    st.markdown('<h4>Size: The size of the app, representing the amount of storage space it occupies on a device.</h4>', unsafe_allow_html=True)
+
+elif column_option == 'Installs':
+    st.markdown("<h4>Installs: The number of times the app has been installed on Android devices. This provides an estimate of the app's popularity.</h4>", unsafe_allow_html=True)
+
+elif column_option == 'Type':
+    st.markdown("<h4>Type: The type of app, either 'Free' or 'Paid'.</h4>", unsafe_allow_html=True)
+
+elif column_option == 'Price':
+    st.markdown("<h4>Price: The price of the app, if it is a paid app. It is given in the local currency.</h4>", unsafe_allow_html=True)
+
+elif column_option == 'Content Rating':
+    st.markdown("<h4>Content Rating: The age group for which the app is appropriate. For example, 'Everyone', 'Teen', 'Mature 17+', etc.</h4>", unsafe_allow_html=True)
+
+elif column_option == 'Genres':
+    st.markdown("<h4>Genres: The genre(s) of the app, such as 'Action', 'Puzzle', 'Arcade', etc.</h4>", unsafe_allow_html=True)
+
+elif column_option == 'Last Updated':
+    st.markdown("<h4>Last Updated: The date when the app was last updated on the Google Play Store.</h4>", unsafe_allow_html=True)
+
+elif column_option == 'Current Ver':
+    st.markdown("<h4>Current Ver: The current version of the app available on the Google Play Store.</h4>", unsafe_allow_html=True)
+
+elif column_option == 'Android Ver':
+    st.markdown("<h4>Android Ver: The minimum Android version required to run the app.</h4>", unsafe_allow_html=True)
 
 
 # Load Data
