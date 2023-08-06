@@ -58,7 +58,7 @@ elif column_option == 'Rating':
     st.markdown('Rating: The user rating of the app, ranging from 1 to 5. This represents the average rating given by users who have downloaded and used the app.', unsafe_allow_html=True)
 
 elif column_option == 'Reviews':
-    st.markdown('<h4>Reviews: The number of user reviews for the app. This indicates the total count of reviews written by users on the Google Play Store.</h4>', unsafe_allow_html=True)
+    st.markdown('Reviews: The number of user reviews for the app. This indicates the total count of reviews written by users on the Google Play Store.', unsafe_allow_html=True)
 
 elif column_option == 'Size':
     st.markdown('Size: The size of the app, representing the amount of storage space it occupies on a device.', unsafe_allow_html=True)
@@ -86,6 +86,12 @@ elif column_option == 'Current Ver':
 
 elif column_option == 'Android Ver':
     st.markdown("Android Ver: The minimum Android version required to run the app.", unsafe_allow_html=True)
+
+elif column_option == 'min_Installs':
+    st.markdown("min_installs: Which is the minimum number of installs of apps (I add this column to the data).", unsafe_allow_html=True)
+
+elif column_option == 'Year':
+        st.markdown("Year: Which is the year the app was updated in (I add this column to the data).", unsafe_allow_html=True)
 
 
 # Load Data
