@@ -19,7 +19,7 @@ st.markdown("<h2 style='text-align: center; color: #3399FF;'>Google Play Store D
 # Load Data
 df = helper_.load_data()
 
-st.markdown("<h3'>Uni Column Analysis</h3>", unsafe_allow_html=True)
+st.markdown("<h3>Uni Column Analysis</h3>", unsafe_allow_html=True)
 
 # Column selection
 column_option = st.selectbox('Select column to visualize it', df.columns)
