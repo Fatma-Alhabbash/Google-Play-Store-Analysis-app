@@ -94,14 +94,6 @@ elif column_option == 'Year':
         st.markdown("Year: Which is the year the app was updated in (I add this column to the data).", unsafe_allow_html=True)
 
 
-# Load Data
-@st.cache_data
-def load_data():
-    df = pd.read_csv('googleplaystore.csv')
-    return df
-
-df = load_data()
-
 # Display Data
 st.header('Data')
 if st.checkbox('Show Data'):
