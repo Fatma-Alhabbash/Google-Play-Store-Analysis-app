@@ -25,12 +25,20 @@ df = helper_.load_data()
 
 st.markdown("<br>", unsafe_allow_html=True)
 
+st.markdown("<h3>Multi Column Analysis</h3>", unsafe_allow_html=True)
+
 # Heat Map
 st.markdown("<h4>Heat Map</h4>", unsafe_allow_html=True)
 plot_ = sns.heatmap(df.corr(), annot=True)
 plt.savefig("heatmap.png")
 st.image("heatmap.png")
 os.remove("heatmap.png")
+
+st.markdown(
+    """<h4>Inferences:</h4>""",
+    unsafe_allow_html=True)
+
+st.markdown("<h7 style='color: #666;'>There is strong positive correlation between min_installs and Reviews columns.</h7>", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 # Pair Plot
