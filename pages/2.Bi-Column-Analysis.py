@@ -22,6 +22,8 @@ df = helper_.load_data()
 
 st.markdown("<br>", unsafe_allow_html=True)
 
+st.markdown("<h3>Bi Column Analysis</h3>", unsafe_allow_html=True)
+
 # Correlation with Type column
 st.markdown("<h4>Select column to show its correlation with Type column</h4>"
             , unsafe_allow_html=True)
@@ -33,7 +35,7 @@ if column_option == 'Rating':
     figure = helper_.type_rating_corr(df)
     st.plotly_chart(figure)
     st.markdown("<h4>Inferences:</h4>", unsafe_allow_html=True)
-    st.markdown("<h7 style='color: #666;'>Paid apps get more rating than free apps</h7>", unsafe_allow_html=True)
+    st.markdown("<h7 style='color: #666;'>The mean rating for Paid apps is slightly more than for free apps</h7>", unsafe_allow_html=True)
 
 elif column_option == 'min_Installs':
     chart_type = st.radio(
@@ -43,7 +45,7 @@ elif column_option == 'min_Installs':
         figure = helper_.type_min_installs_bar(df)
         st.plotly_chart(figure)
         st.markdown("<h4>Inferences:</h4>", unsafe_allow_html=True)
-        st.markdown("<h7 style='color: #666;'>Free apps received 99.4% of installations, whereas paid apps received only 0.6%. This means that there is a greater demand for free applications.</h7>", unsafe_allow_html=True)
+        st.markdown("<h7 style='color: #666;'>Free apps received 99.4% of mean installations, whereas paid apps received only 0.6%. This means that there is a greater demand for free applications</h7>", unsafe_allow_html=True)
 
     else:
         figure = helper_.type_min_installs_pie(df)
@@ -52,7 +54,7 @@ elif column_option == 'min_Installs':
         plt.rc('font', size=5)
         st.pyplot(figure)
         st.markdown("<h4>Inferences:</h4>", unsafe_allow_html=True)
-        st.markdown("<h7 style='color: #666;'>free apps received 99.4% of installations, whereas paid apps received only 0.6%.</h7>", unsafe_allow_html=True)
+        st.markdown("<h7 style='color: #666;'>Free apps received 99.4% of mean installations, whereas paid apps received only 0.6%. This means that there is a greater demand for free applications</h7>", unsafe_allow_html=True)
 
 else:
     figure = helper_.type_Category_corr(df)
@@ -88,7 +90,7 @@ else:
     figure = helper_.category_min_installs_corr(df)
     st.plotly_chart(figure)
     st.markdown("<h4>Inferences:</h4>", unsafe_allow_html=True)
-    st.markdown("<h7 style='color: #666;'>Communication apps have the highest number of installations (65.98M Installs). This means that this application is the most famous and used.</h7>", unsafe_allow_html=True)
+    st.markdown("<h7 style='color: #666;'>Communication apps are the most commonly installed (65.98M installations). This means that these applications are the most famous and used</h7>", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
