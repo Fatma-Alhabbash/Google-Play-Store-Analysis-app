@@ -19,8 +19,10 @@ st.markdown("<h2 style='text-align: center; color: #3399FF;'>Google Play Store D
 # Load Data
 df = helper_.load_data()
 
+st.markdown("<h3'>Uni Column Analysis</h3>", unsafe_allow_html=True)
+
 # Column selection
-column_option = st.selectbox('Select Column', df.columns)
+column_option = st.selectbox('Select column to visualize it', df.columns)
 
 numerical_cols = df.select_dtypes(exclude='object').columns
 categorical_cols = df.select_dtypes(include='object').columns
