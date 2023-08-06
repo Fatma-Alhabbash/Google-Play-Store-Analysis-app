@@ -46,7 +46,7 @@ This data from Kaggle <a href="https://www.kaggle.com/datasets/lava18/google-pla
 st.markdown("<br>", unsafe_allow_html=True)
 
 # Metadata of the columns
-st.markdown('Metadata:', unsafe_allow_html=True)
+st.markdown('<h4>Metadata:</h4>', unsafe_allow_html=True)
 column_option = st.selectbox('Select the column to display metadata of it', df.columns)
 if column_option == 'App':
     st.markdown('App: The name of the mobile application listed on the Google Play Store.', unsafe_allow_html=True)
