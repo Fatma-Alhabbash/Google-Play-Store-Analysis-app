@@ -102,14 +102,11 @@ st.plotly_chart(figure)
 st.markdown(
     """
     <h4>Inferences:</h4>
-    <ol style='color: #666;'>
-        <li>Highest number of installs (20.3M) was in 2018.</li>
-        <li>Lowest number of installs (100K) was in 2010.</li>
-        <ul>This means that the demand for applications increases with the passage of years.</ul>
-    </ol>
     """,
     unsafe_allow_html=True
 )
+
+st.markdown("<h7 style='color: #666;'>The more recent the app update, the more app installs</h7>", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
 
