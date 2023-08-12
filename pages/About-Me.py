@@ -29,6 +29,6 @@ def about_me():
             st.image('github-logo.png')
             
         with col3:
-            st.markdown("[![Github link]](https://github.com/Fatma-Alhabbash)")
+            st.markdown("[GitHub Link](https://github.com/Fatma-Alhabbash)")
 
 about_me()
