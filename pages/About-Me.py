@@ -26,7 +26,7 @@ def about_me():
             st.write(' ')
 
         with col2:
-            st.image('github-logo.png')
+            st.image('https://www.flaticon.com/free-icon/github-logo_25231')
             
         with col3:
             st.markdown("[GitHub Link](https://github.com/Fatma-Alhabbash)")
