@@ -36,3 +36,17 @@ elif column_option in categorical_cols:
     figure = helper_.univariate_cat(df, column_option)
     st.plotly_chart(figure)
 
+    if column_option == "App":
+        if st.checkbox('Top 10 Apps'):
+            figure = helper_.top_ten(df, column_option)
+            st.plotly_chart(figure)
+
+    elif column_option == "Category":
+        if st.checkbox('Top 10 Categories'):
+            figure = helper_.top_ten(df, column_option)
+            st.plotly_chart(figure)
+
+    elif column_option == "Genres":
+        if st.checkbox('Top 10 Genres'):
+            figure = helper_.top_ten(df, column_option)
+            st.plotly_chart(figure)

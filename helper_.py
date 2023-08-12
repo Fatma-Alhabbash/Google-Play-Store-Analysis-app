@@ -65,6 +65,12 @@ def univariate_cat(data, column):
     fig.update_layout(height=600, width=800)
     return fig
 
+def top_ten(data, column):
+    fig = px.bar(data[column].value_counts()[:10], title=f'Bar plot of Top 10 {column}', color = data[column].value_counts()[:10],
+                 labels={
+        'index': f'{column}'})
+    fig.update_layout(height=600, width=800)
+    return fig
 
 def type_rating_corr(data):
     dff=data.groupby(['Type'])['Rating'].mean()
