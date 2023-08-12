@@ -19,6 +19,6 @@ def about_me():
     st.markdown("## Future Aspirations")
     st.markdown("I look forward to expanding my knowledge in Data Science and AI, staying updated with the latest advancements in the field. I am excited about contributing to real-world projects and leveraging data to create positive impacts on society.")
 
-    st.markdown("[GitHub Link](https://github.com/Fatma-Alhabbash)")
+    st.markdown("[My GitHub Link](https://github.com/Fatma-Alhabbash)")
 
 about_me()
