@@ -19,16 +19,6 @@ def about_me():
     st.markdown("## Future Aspirations")
     st.markdown("I look forward to expanding my knowledge in Data Science and AI, staying updated with the latest advancements in the field. I am excited about contributing to real-world projects and leveraging data to create positive impacts on society.")
 
-    with st.container():
-        col1, col2, col3 = st.columns(3)
-
-        with col1:
-            st.write(' ')
-
-        with col2:
-            st.image('https://www.flaticon.com/free-icon/github-logo_25231')
-            
-        with col3:
-            st.markdown("[GitHub Link](https://github.com/Fatma-Alhabbash)")
+    st.markdown("[GitHub Link](https://github.com/Fatma-Alhabbash)")
 
 about_me()
