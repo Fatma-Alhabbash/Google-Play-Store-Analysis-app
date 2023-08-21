@@ -32,6 +32,14 @@ if column_option in numerical_cols:
     figure = helper_.univariate_num(df, column_option)
     st.plotly_chart(figure)
 
+    if column_option == "Reviews":
+        st.markdown("<h4>Note:</h4>", unsafe_allow_html=True)
+        st.markdown("<h7>Since the external points are arranged behind each other and numerous, they cannot be considered abnormal or incorrect. Therefore, I did not remove them.</h7>", unsafe_allow_html=True)
+    
+    if column_option == "Price":
+        st.markdown("<h4>Note:</h4>", unsafe_allow_html=True)
+        st.markdown("<h7>Due to the large number of free apps in the data, when the column Price is displayed, it indicates that there is something wrong with it.</h7>", unsafe_allow_html=True)
+
 elif column_option in categorical_cols:
     figure = helper_.univariate_cat(df, column_option)
     st.plotly_chart(figure)

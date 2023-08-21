@@ -37,6 +37,14 @@ def load_data():
     df['min_Installs']=df['Installs'].str.replace('[+,]', '', regex=True)
 
     df["min_Installs"] = pd.to_numeric(df["min_Installs"])
+
+    # Removing ouliers from Reviews column
+    q1 = df['Reviews'].quantile(0.25)
+    q3 = df['Reviews'].quantile(0.75)
+    iqr = q3 - q1
+    lower_bound = q1 -(1.5 * iqr) 
+    upper_bound = q3 +(1.5 * iqr) 
+    df = df.loc[(df['Reviews'] >= lower_bound) & (df['Reviews'] <= upper_bound)]
     return df
 
 df = load_data()
